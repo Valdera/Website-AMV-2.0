@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import SidebarWithHeader from "@components/sidebar/sidebar";
+import Navbar from "@components/navbar/Navbar";
 
 import "@styles/globals.css";
 
@@ -8,11 +8,10 @@ import theme from "@styles/theme";
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <SidebarWithHeader>
-        <div className="h-auto p-5">
-          <Component {...pageProps} />
-        </div>
-      </SidebarWithHeader>
+      <Navbar />
+      <div className="h-auto">
+        <Component {...pageProps} />
+      </div>
     </ChakraProvider>
   );
 }
