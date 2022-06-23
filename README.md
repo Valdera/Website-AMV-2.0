@@ -2,8 +2,8 @@
 
 ```
 git clone this project
-npm run install
-npm run dev
+yarn add
+yarn dev
 ```
 
 ## Collections of UI KIT
