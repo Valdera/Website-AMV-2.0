@@ -4,7 +4,6 @@
 
 - [Chakra Templates](https://chakra-templates.dev)
 - [Choc UI](https://choc-ui.com/)
-- [Lofi UI](https://lofiui.co/)
 - [Meraki UI](https://merakiui.com/)
 - [Kometea UI](https://kitwind.io/products/kometa/components)
 - [Mamba UI](https://mambaui.com/components)
@@ -13,6 +12,10 @@
 - [Headless UI](https://headlessui.dev/)
 - [Hyper UI](https://www.hyperui.dev/)
 - [Mantine](https://mantine.dev/)
+  Primary Color Yellow: #F9BD04
+  Secondary Color Purple: #230155
+  Background Color Dark: #111827
+  Background Color Grey: #FAFAFA
 
 ## Asset Source
 

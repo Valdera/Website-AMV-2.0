@@ -1,9 +1,9 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "@components/navbar/Navbar";
 
-import "@styles/globals.css";
+import "@pages/globals.css";
 
-import theme from "@styles/theme";
+import theme from "../chakra.theme";
 
 function MyApp({ Component, pageProps }) {
   return (
