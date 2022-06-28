@@ -1,5 +1,11 @@
 # Autonomous Marine Vehicle UI
 
+```
+git clone this project
+yarn add
+yarn dev
+```
+
 ## Collections of UI KIT
 
 - [Chakra Templates](https://chakra-templates.dev)
