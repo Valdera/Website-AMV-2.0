@@ -39,7 +39,7 @@ module.exports = {
           800: "#5b21b6",
           900: "#4c1d95",
         },
-        background: "#f8fafc",
+        background: "#1F2937",
       },
       animations: {
         dropdown: "dropdown 3s ease-in-out infinite",

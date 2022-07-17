@@ -1,15 +1,16 @@
+import ButtonRounded from "@components/buttons/rounded/ButtonRounded";
 import { range } from "lodash";
 
 const ContentGrid = () => {
   return (
-    <section className="text-wite bg-gray-900">
+    <section className="text-wite bg-background">
       <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div className="max-w-lg mx-auto text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl text-pink-500">
+          <h2 className="text-3xl font-bold font-display sm:text-4xl text-primary-400">
             Kickstart your marketing
           </h2>
 
-          <p className="mt-4 text-gray-300">
+          <p className="mt-4 font-body text-gray-300">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam
             fugit consequuntur saepe laborum.
@@ -20,12 +21,12 @@ const ContentGrid = () => {
           {range(6).map((i) => (
             <a
               key={i}
-              className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-pink-500/10 hover:border-pink-500/10"
+              className="block p-8 transition border border-gray-800 shadow-xl rounded-xl hover:shadow-primary-500/10 hover:border-primary-500/10"
               href="/services/digital-campaigns"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-10 h-10 text-pink-500"
+                className="w-10 h-10 text-primary-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -40,11 +41,11 @@ const ContentGrid = () => {
                 />
               </svg>
 
-              <h3 className="mt-4 text-xl font-bold text-white">
+              <h3 className="mt-4 text-xl font-display font-bold text-white">
                 Digital campaigns
               </h3>
 
-              <p className="mt-1 text-sm text-gray-300">
+              <p className="mt-1 text-sm font-body text-gray-300">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut
                 quo possimus adipisci distinctio alias voluptatum blanditiis
                 laudantium.
@@ -54,27 +55,7 @@ const ContentGrid = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <a
-            className="inline-flex items-center px-8 py-3 mt-8 text-white bg-pink-600 border border-pink-600 rounded hover:bg-transparent active:text-pink-500 focus:outline-none focus:ring"
-            href="/get-started"
-          >
-            <span className="text-sm font-medium"> Get Started </span>
-
-            <svg
-              className="w-5 h-5 ml-3"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
+          <ButtonRounded>See More</ButtonRounded>
         </div>
       </div>
     </section>

@@ -11,7 +11,6 @@ const SectionMember = ({ data }) => {
       </div>
       <div className="grid gap-10 mx-auto lg:grid-cols-2 lg:max-w-screen-lg">
         {data.members.map((data) => {
-          console.log(data);
           return <CardMember key={data.name} data={data} />;
         })}
       </div>
