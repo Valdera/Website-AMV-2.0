@@ -1,6 +1,5 @@
 import TextGradient from "@components/text/gradient/TextGradient";
 import React from "react";
-import { AspectRatio, Divider, Spacer } from "@chakra-ui/react";
 import YoutubeVideo from "@components/youtube-video/YoutubeVideo";
 
 const VideoHome = () => {

@@ -4,7 +4,7 @@ import { colors } from "./global-theme";
 const theme = extendTheme({
   fonts: {
     // heading: "Inter",
-    // body: "Poppins",
+    body: "Poppins",
   },
 
   colors: colors,
