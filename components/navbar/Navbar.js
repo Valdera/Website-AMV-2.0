@@ -106,16 +106,7 @@ export default function Navbar() {
           spacing={6}
         >
           <Button
-            as={"a"}
-            fontSize={"sm"}
-            fontWeight={400}
-            variant={"link"}
-            href={"#"}
-          >
-            Sign In
-          </Button>
-          <Button
-            display={{ base: "none", md: "inline-flex" }}
+            display={{ md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
@@ -125,7 +116,7 @@ export default function Navbar() {
               bg: "secondary.700",
             }}
           >
-            Sign Up
+            Contact Us
           </Button>
         </Stack>
       </Flex>
