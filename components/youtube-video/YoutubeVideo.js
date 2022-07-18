@@ -17,7 +17,7 @@ const YoutubeVideo = ({ videoId, height = "380", width = "640" }) => {
   return (
     // <AspectRatio maxW="560px" ratio={4 / 3}>
     <iframe
-      className="aspect-video max-h-40  md:max-h-full"
+      className="aspect-video max-h-40 max-w-full md:max-h-full"
       width={width}
       height={height}
       src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`}

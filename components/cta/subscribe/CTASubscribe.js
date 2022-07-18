@@ -12,7 +12,7 @@ const CTASubscribe = () => {
       }}
     >
       <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
-        <h1 className="text-4xl font-display antialiased font-semibold leading-none text-center text-gray-100">
+        <h1 className="text-4xl antialiased font-bold font-display leading-none text-center text-gray-100">
           Get Our Updates
         </h1>
         <p className="pt-2 pb-8 font-body text-lg antialiased text-center text-gray-100">
