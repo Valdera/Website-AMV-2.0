@@ -16,7 +16,7 @@ import {
 const CTASauvc = () => {
   return (
     <section className="pt-10 h-full w-full bg-background -z-1">
-      <Container maxW={"7xl"} pb={"100"}>
+      <Container maxW={"7xl"} pb={"10"}>
         <Stack
           align={"center"}
           spacing={{ base: 8, md: 10 }}
@@ -87,7 +87,7 @@ const CTASauvc = () => {
               w={"150%"}
               h={"150%"}
               position={"absolute"}
-              top={"-10%"}
+              top={{ base: "-20%", md: "-10%" }}
               left={-2}
               zIndex={0}
               color={useColorModeValue("secondary.50", "secondary.600")}
@@ -102,8 +102,8 @@ const CTASauvc = () => {
                 alt={"Hero Image"}
                 fit={"cover"}
                 align={"center"}
-                w={"160%"}
-                h={"160%"}
+                w={{ base: "120%", md: "160%" }}
+                h={{ base: "120%", md: "160%" }}
                 src={"/asset/makara_pumpkin.svg"}
               />
             </Box>

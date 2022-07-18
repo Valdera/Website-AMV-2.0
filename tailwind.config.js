@@ -40,6 +40,7 @@ module.exports = {
           900: "#4c1d95",
         },
         background: "#1F2937",
+        navbar: "#111827",
       },
       animations: {
         dropdown: "dropdown 3s ease-in-out infinite",

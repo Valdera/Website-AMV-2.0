@@ -59,16 +59,16 @@ export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box zIndex={1000} bgColor={"white"}>
+    <Box zIndex={1000} className="bg-background">
       <Flex
-        bg={useColorModeValue("white", "gray.800")}
-        color={useColorModeValue("gray.600", "white")}
+        className="bg-navbar"
+        color={"white"}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
+        borderColor={"gray.900"}
         align={"center"}
       >
         <Flex
@@ -89,7 +89,7 @@ export default function Navbar() {
           <Text
             textAlign={useBreakpointValue({ base: "center", md: "left" })}
             fontFamily={"heading"}
-            color={useColorModeValue("gray.800", "white")}
+            color={"white"}
           >
             Logo
           </Text>
@@ -119,10 +119,10 @@ export default function Navbar() {
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-            bg={"pink.400"}
+            bg={"secondary.600"}
             href={"#"}
             _hover={{
-              bg: "pink.300",
+              bg: "secondary.700",
             }}
           >
             Sign Up

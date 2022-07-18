@@ -1,11 +1,15 @@
-import { Badge, Image } from "@chakra-ui/react";
+import { Badge, Image, useDisclosure } from "@chakra-ui/react";
+import ModalRobot from "@components/modal/robot/ModalRobot";
 import Link from "next/link";
 import { BiSearchAlt } from "react-icons/bi";
 
 const CardRobot = ({ data }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <div className="relative block bg-white rounded-lg hover:shadow-sm hover:shadow-primary-400">
-      {/* <button
+    <>
+      <div className="relative block bg-white rounded-lg hover:shadow-sm hover:shadow-primary-400">
+        {/* <button
         type="button"
         name="wishlist"
         className="absolute p-2 text-white bg-black rounded-full right-4 top-4"
@@ -26,39 +30,43 @@ const CardRobot = ({ data }) => {
         </svg>
       </button> */}
 
-      <Image
-        loading="lazy"
-        alt="Build Your Own Drone"
-        className="object-contain w-full h-56 lg:h-72"
-        src="https://www.hyperui.dev/photos/toy-1.jpeg"
-      />
+        <Image
+          loading="lazy"
+          alt="Build Your Own Drone"
+          className="object-contain w-full h-56 lg:h-72"
+          src="https://www.hyperui.dev/photos/toy-1.jpeg"
+        />
 
-      <div className="p-6">
-        <div className="flex gap-2">
-          <Badge p={1} colorScheme={"green"}>
-            New
-          </Badge>
-          <Badge p={1} colorScheme={"purple"}>
-            Drone
-          </Badge>
+        <div className="p-6">
+          <div className="flex gap-2">
+            <Badge p={1} colorScheme={"green"}>
+              New
+            </Badge>
+            <Badge p={1} colorScheme={"purple"}>
+              Drone
+            </Badge>
+          </div>
+
+          <h5 className="mt-4 text-lg font-bold">Makara Pumpkin Mark I</h5>
+
+          <p className="mt-2 text-sm font-medium text-gray-600">
+            Singapore Autonomous Underwater Vehicle
+          </p>
+
+          <button
+            name="add"
+            type="button"
+            onClick={onOpen}
+            className="flex items-center justify-center w-full px-8 py-4 mt-4 bg-yellow-500 rounded-sm"
+          >
+            <span className="text-sm font-medium mr-1">View Details</span>
+            <BiSearchAlt />
+          </button>
         </div>
-
-        <h5 className="mt-4 text-lg font-bold">Makara Pumpkin Mark I</h5>
-
-        <p className="mt-2 text-sm font-medium text-gray-600">
-          Singapore Autonomous Underwater Vehicle
-        </p>
-
-        <button
-          name="add"
-          type="button"
-          className="flex items-center justify-center w-full px-8 py-4 mt-4 bg-yellow-500 rounded-sm"
-        >
-          <span className="text-sm font-medium mr-1">View Details</span>
-          <BiSearchAlt />
-        </button>
       </div>
-    </div>
+
+      <ModalRobot isOpen={isOpen} onOpen={onOpen} onClose={onClose} />
+    </>
   );
 };
 

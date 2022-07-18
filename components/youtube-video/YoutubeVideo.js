@@ -1,9 +1,10 @@
+import { AspectRatio } from "@chakra-ui/react";
 import YouTube from "react-youtube";
 
-const YoutubeVideo = ({ videoId }) => {
+const YoutubeVideo = ({ videoId, height = "380", width = "640" }) => {
   const opts = {
-    height: "390",
-    width: "640",
+    height: height,
+    width: width,
     playerVars: {
       autoplay: 1,
     },
@@ -14,9 +15,14 @@ const YoutubeVideo = ({ videoId }) => {
   };
 
   return (
-    <div>
-      <YouTube videoId={videoId} opts={opts} onReady={_onReady} />
-    </div>
+    // <AspectRatio maxW="560px" ratio={4 / 3}>
+    <iframe
+      className="aspect-video max-h-40  md:max-h-full"
+      width={width}
+      height={height}
+      src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1`}
+    ></iframe>
+    // </AspectRatio>
   );
 };
 
