@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
       <Navbar />
-      <div className="h-auto bg-background">
+      <div className="h-auto bg-background max-w-full overflow-hidden">
         <Component {...pageProps} />
       </div>
     </ChakraProvider>

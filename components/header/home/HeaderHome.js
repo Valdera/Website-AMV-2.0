@@ -23,7 +23,8 @@ const HeaderHome = () => {
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
               <h2 className="max-w-lg mb-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
-                Autonomous Marine Vehicle <br className="hidden md:block" />
+                Autonomous Marine Vehicle<></>{" "}
+                <br className="hidden md:block" />
                 Universitas Indonesia
               </h2>
               <p className="max-w-xl font-medium font-body mb-4 text-base text-gray-200 md:text-lg">

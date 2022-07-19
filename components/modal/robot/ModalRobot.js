@@ -60,6 +60,34 @@ const ModalRobot = ({ isOpen, onOpen, onClose }) => {
                       Tailwind CSS, will this be the perfect CSS framework, well
                       let’s find out.
                     </p>
+                    <p>
+                      What if there is an easy way to achieve responsive UI
+                      without using any UI kit? Can we create new and fresh
+                      designs for every project with a CSS framework? Enter
+                      Tailwind CSS, will this be the perfect CSS framework, well
+                      let’s find out.
+                    </p>{" "}
+                    <p>
+                      What if there is an easy way to achieve responsive UI
+                      without using any UI kit? Can we create new and fresh
+                      designs for every project with a CSS framework? Enter
+                      Tailwind CSS, will this be the perfect CSS framework, well
+                      let’s find out.
+                    </p>{" "}
+                    <p>
+                      What if there is an easy way to achieve responsive UI
+                      without using any UI kit? Can we create new and fresh
+                      designs for every project with a CSS framework? Enter
+                      Tailwind CSS, will this be the perfect CSS framework, well
+                      let’s find out.
+                    </p>{" "}
+                    <p>
+                      What if there is an easy way to achieve responsive UI
+                      without using any UI kit? Can we create new and fresh
+                      designs for every project with a CSS framework? Enter
+                      Tailwind CSS, will this be the perfect CSS framework, well
+                      let’s find out.
+                    </p>
                   </div>
                 </div>
               </article>

@@ -6,7 +6,7 @@ import { data } from "./index.mock";
 
 const Team = () => {
   return (
-    <div>
+    <>
       <HeaderTeam />
       <div>
         {data.map((data) => {
@@ -14,7 +14,7 @@ const Team = () => {
         })}
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

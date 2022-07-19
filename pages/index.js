@@ -8,12 +8,14 @@ import CTAMember from "@components/cta/member/CTAMember";
 import CTASubscribe from "@components/cta/subscribe/CTASubscribe";
 import GridAchievement from "@components/grid/achievement/GridAchievement";
 import Sponsor from "@components/sponsor/Sponsor";
+import CTAInstagram from "@components/cta/documentation/CTAInstagram";
 
 export default function Home() {
   return (
     <>
       <HeaderHome />
       <VideoHome />
+      {/* <CTAInstagram /> */}
       <GridAchievement />
       <CTASubscribe />
       <PreviewProduct />
