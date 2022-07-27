@@ -1,5 +1,3 @@
-import React from "react";
-
 const Timeline = () => {
   return (
     <section className="bg-background text-gray-100">

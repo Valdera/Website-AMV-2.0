@@ -62,5 +62,10 @@ module.exports = {
     },
   },
   // add daisyUI plugin
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };

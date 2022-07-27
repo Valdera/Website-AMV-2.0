@@ -1,5 +1,6 @@
 import { Image } from "@chakra-ui/react";
 import ButtonBasic from "@components/button/basic/ButtonBasic";
+import TextGlitch from "@components/text/glitch/TextGlitch";
 
 const HeaderHome = () => {
   return (
@@ -22,12 +23,12 @@ const HeaderHome = () => {
         <div className="relative px-4 py-16 mx-auto overflow-hidden sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
           <div className="flex flex-col items-center justify-between xl:flex-row">
             <div className="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
-              <h2 className="max-w-lg mb-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
-                Autonomous Marine Vehicle<></>{" "}
-                <br className="hidden md:block" />
-                Universitas Indonesia
-              </h2>
-              <p className="max-w-xl font-medium font-body mb-4 text-base text-gray-200 md:text-lg">
+              <div className="max-w-lg mb-6 font-display text-3xl font-bold tracking-tight text-white sm:text-5xl sm:leading-none">
+                <TextGlitch>Autonomous Marine Vehicle</TextGlitch>
+                <br className="hidden" />
+                <TextGlitch>Universitas Indonesia</TextGlitch>
+              </div>
+              <p className="max-w-xl font-medium font-body mb-7 text-base text-gray-200 md:text-lg">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudan, totam rem aperiam, eaque ipsa
                 quae.

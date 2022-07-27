@@ -1,8 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Avatar, Badge } from "@chakra-ui/react";
 import { Navigation } from "swiper";
+import CardTestimonial from "@components/card/testimonial/CardTestimonial";
+import { mockData } from "./Testimonial.mock";
 
-const Testimonials = () => {
+const Testimonial = ({ data = mockData }) => {
   return (
     <section className="bg-background flex justify-center">
       <div className="px-4 py-16  sm:px-6 lg:pl-8 lg:pr-0 lg:mr-0 sm:py-24 max-w-[1340px]">
@@ -64,7 +65,6 @@ const Testimonials = () => {
 
           <div className="-mx-6 lg:col-span-2 lg:mx-0">
             <Swiper
-              // className="overflow-hidden"
               modules={[Navigation]}
               loop={true}
               slidesPerView={1}
@@ -75,37 +75,9 @@ const Testimonials = () => {
                 prevEl: ".prev-button",
               }}
             >
-              {[1, 2, 3].map((i) => (
-                <SwiperSlide key={i}>
-                  <blockquote className="flex flex-col justify-between h-full p-12 bg-white">
-                    <div>
-                      <Avatar
-                        size="xl"
-                        name="Christian Nwamba"
-                        src="https://bit.ly/code-beast"
-                      />{" "}
-                      <div className="mt-4">
-                        <p className="text-2xl font-bold text-secondary-500 sm:text-3xl">
-                          Stayin&apos; Alive
-                        </p>
-
-                        <p className="mt-4 font-body leading-relaxed text-gray-500">
-                          No, Rose, they are not breathing. And they have no
-                          arms or legs … Where are they? You know what? If we
-                          come across somebody with no arms or legs, do we
-                          bother resuscitating them? I mean, what quality of
-                          life do we have there?
-                        </p>
-                      </div>
-                    </div>
-
-                    <footer className="mt-8 text-sm text-secondary-500">
-                      <Badge mr="2" colorScheme="green">
-                        Ketua AMV UI 201{i}
-                      </Badge>
-                      &mdash; Michael Scott
-                    </footer>
-                  </blockquote>
+              {data.map((item) => (
+                <SwiperSlide key={item.name}>
+                  <CardTestimonial />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -158,4 +130,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default Testimonial;

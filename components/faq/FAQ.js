@@ -1,5 +1,3 @@
-import React from "react";
-
 const FAQ = () => {
   return (
     <section className="py-10 bg-background  text-white font-body">

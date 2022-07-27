@@ -1,5 +1,4 @@
 import { Image } from "@chakra-ui/react";
-import Link from "next/link";
 
 const HeaderTeam = (props) => {
   return (
@@ -141,7 +140,7 @@ const HeaderTeam = (props) => {
           </div>
 
           <div className="hidden lg:flex lg:w-1/2 lg:justify-center">
-            <img
+            <Image
               className="w-[28rem] h-[28rem] flex-shrink-0 object-cover xl:w-[40rem] xl:h-[34rem] rounded-2xl"
               src="/asset/cta_member.jpg"
               alt=""

@@ -1,10 +1,10 @@
-import { Badge, Avatar } from "@chakra-ui/react";
+import { Badge, Avatar, Image } from "@chakra-ui/react";
 
 const CardBlog = () => {
   return (
     <>
       <a href="#">
-        <img
+        <Image
           src="https://kutty.netlify.app/brand/og.png"
           className="object-cover w-full h-64 mb-5 bg-center rounded"
           alt="Kutty"

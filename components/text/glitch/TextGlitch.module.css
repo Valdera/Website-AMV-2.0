@@ -1,5 +1,5 @@
 .glitch {
-  font-size: 8rem;
+  font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
@@ -29,11 +29,8 @@
   animation: glitch 375ms infinite;
   clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
   transform: translate(0.0125em, 0.025em);
-  /* color: red; */
   opacity: 0.8;
 }
-
-/* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
 
 @keyframes glitch {
   0% {
@@ -72,9 +69,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
+  .glitch,
+  .glitch::before,
+  .glitch::after {
     animation-delay: -1ms !important;
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;

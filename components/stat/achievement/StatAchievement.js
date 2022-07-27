@@ -1,5 +1,3 @@
-import React from "react";
-
 const StatAchievement = () => {
   return (
     <section className="p-6 bg-gray-800 text-gray-100">
