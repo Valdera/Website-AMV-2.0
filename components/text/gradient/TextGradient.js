@@ -6,7 +6,7 @@ const TextGradient = ({ children }) => {
       as="h1"
       mb={6}
       fontSize={{
-        base: "4xl",
+        base: "5xl",
         md: "6xl",
       }}
       className="font-display"

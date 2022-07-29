@@ -8,11 +8,12 @@ import {
   ModalHeader,
   ModalFooter,
   Badge,
+  Image,
 } from "@chakra-ui/react";
 import YoutubeVideo from "@components/youtube-video/YoutubeVideo";
 import { mockData } from "./ModalRobot.mock";
 
-const ModalRobot = ({ isOpen, onOpen, onClose, data = mockData }) => {
+const ModalRobot = ({ isOpen, onOpen, onClose, data }) => {
   return (
     <>
       <Modal
@@ -24,7 +25,7 @@ const ModalRobot = ({ isOpen, onOpen, onClose, data = mockData }) => {
       >
         <ModalOverlay zIndex={100} />
         <ModalContent>
-          <ModalHeader>{data.type_detail}</ModalHeader>
+          <ModalHeader>{data.sub_title}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <div className="flex flex-col items-center justify-center px-10 w-full">
@@ -32,9 +33,9 @@ const ModalRobot = ({ isOpen, onOpen, onClose, data = mockData }) => {
                 <h1
                   className="mb-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
                   itemProp="headline"
-                  title={data.title}
+                  title={data.name}
                 >
-                  {data.title}
+                  {data.name}
                 </h1>
                 <div className="flex mb-1 gap-1">
                   {data.tags.map((item) => (
@@ -47,16 +48,28 @@ const ModalRobot = ({ isOpen, onOpen, onClose, data = mockData }) => {
               <div className="flex flex-col mb-5 items-center justify-center">
                 {data.source_type == "video" && (
                   <YoutubeVideo
-                    videoId={"U8GOqvt0ufw"}
+                    videoId={data.source}
                     width="400"
                     height="240"
+                  />
+                )}
+                {data.source_type == "image" && (
+                  <Image
+                    width="400"
+                    height="240"
+                    alt={data.name}
+                    src={data.source}
                   />
                 )}
               </div>
               <article>
                 <div>
                   <div className="w-full mx-auto prose text-justify ">
-                    <p>{data.description}</p>
+                    {data.description.split("\\n").map((item, i) => (
+                      <p className="m-2" key={i}>
+                        {item}
+                      </p>
+                    ))}
                   </div>
                 </div>
               </article>

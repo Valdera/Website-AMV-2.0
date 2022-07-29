@@ -1,6 +1,6 @@
 import { Image } from "@chakra-ui/react";
-import ButtonBasic from "@components/button/basic/ButtonBasic";
 import TextGlitch from "@components/text/glitch/TextGlitch";
+import { Link as ScLink, animateScroll as scroll } from "react-scroll";
 
 const HeaderHome = () => {
   return (
@@ -29,15 +29,33 @@ const HeaderHome = () => {
                 <TextGlitch>Universitas Indonesia</TextGlitch>
               </div>
               <p className="max-w-xl font-medium font-body mb-7 text-base text-gray-200 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudan, totam rem aperiam, eaque ipsa
-                quae.
+                <b>AMV UI is a vessel:</b> a place for the bright minds to
+                explore what they like, what they want to be, and find who they
+                really are. It is a boat sailing through high waves and low
+                shores. This is the place where the future sets its first sails.
               </p>
 
-              <ButtonBasic>Learn More</ButtonBasic>
+              <ScLink
+                activeClass="active"
+                to="achivement-scroll"
+                spy={true}
+                smooth={true}
+              >
+                <button
+                  type="button"
+                  className="hover:scale-110 transition-all px-8 py-3 font-medium text-lg rounded font-body bg-gray-100 text-gray-800"
+                >
+                  Learn More
+                </button>
+              </ScLink>
             </div>
             <div className="w-full h-full hidden xl:block  max-w-3xl xl:px-10 xl:w-8/12 md:flex md:justify-center">
-              <Image src="asset/home_icon.svg" className="" alt="" />
+              <Image
+                src="asset/home_icon.png"
+                loading="eager"
+                className=""
+                alt=""
+              />
             </div>
           </div>
         </div>

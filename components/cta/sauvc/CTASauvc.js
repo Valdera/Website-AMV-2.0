@@ -11,11 +11,12 @@ import {
   IconButton,
   createIcon,
   useColorModeValue,
+  Link,
 } from "@chakra-ui/react";
 
 const CTASauvc = () => {
   return (
-    <section className="pt-10 h-full w-full bg-background -z-1">
+    <section className="px-5 h-full w-full bg-background -z-1">
       <Container maxW={"7xl"} pb={"10"}>
         <Stack
           align={"center"}
@@ -44,36 +45,44 @@ const CTASauvc = () => {
                   bg: "secondary.600",
                   zIndex: -1,
                 }}
+                className="text-6xl"
               >
                 Our latest robot,
               </Text>
               <br />
-              <Text as={"span"} color={"secondary.600"}>
+              <Text as={"span"} color={"secondary.600"} className="text-5xl">
                 on Youtube!
               </Text>
             </Heading>
             <Text color={"gray.400"} className="font-body">
-              Snippy is a rich coding snippets app that lets you create your own
-              code snippets, categorize them, and even sync them in the cloud so
-              you can use them anywhere. All that is free!
+              Our latest robot is called <b>Makara Pumpkin</b>. Makara Pumpkin
+              is an ROV that consists of 6 thrusters which can give great
+              maneuverability and is also equipped with a gripper. It makes
+              Makara Pumpkin{" "}
+              <b>able to do several tasks and it is autonomous!</b>
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: "column", sm: "row" }}
             >
-              <Button
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={6}
-                colorScheme={"secondary"}
-                bg={"secondary.600"}
-                leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
-                _hover={{ bg: "secondary.500" }}
-                fontFamily={"body"}
+              <Link
+                isExternal
+                href="https://www.youtube.com/watch?v=U8GOqvt0ufw"
               >
-                Get started
-              </Button>
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                  colorScheme={"secondary"}
+                  bg={"secondary.600"}
+                  leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
+                  _hover={{ bg: "secondary.500" }}
+                  fontFamily={"body"}
+                >
+                  Get started
+                </Button>
+              </Link>
             </Stack>
           </Stack>
           <Flex
@@ -96,14 +105,14 @@ const CTASauvc = () => {
               position={"relative"}
               height={"300px"}
               width={"full"}
-              //   overflow={"hidden"}
+              // overflow={"hidden"}
             >
               <Image
                 alt={"Hero Image"}
                 fit={"cover"}
                 align={"center"}
-                w={{ base: "120%", md: "160%" }}
-                h={{ base: "120%", md: "160%" }}
+                w={{ base: "120%", md: "140%", lg: "160%" }}
+                h={{ base: "120%", md: "140%", lg: "160%" }}
                 src={"/asset/makara_pumpkin.svg"}
               />
             </Box>

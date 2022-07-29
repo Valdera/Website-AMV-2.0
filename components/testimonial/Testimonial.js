@@ -1,23 +1,21 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import CardTestimonial from "@components/card/testimonial/CardTestimonial";
-import { mockData } from "./Testimonial.mock";
 
-const Testimonial = ({ data = mockData }) => {
+const Testimonial = ({ testimonials }) => {
   return (
     <section className="bg-background flex justify-center">
       <div className="px-4 py-16  sm:px-6 lg:pl-8 lg:pr-0 lg:mr-0 sm:py-24 max-w-[1340px]">
         <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-x-16 gap-y-8 lg:items-center">
           <div className="max-w-xl text-center sm:text-left">
             <h2 className="text-3xl font-bold text-primary-400 font-display tracking-tight sm:text-4xl">
-              Dont just take our word for it...
-              <br className="hidden sm:block lg:hidden" />
-              Read reviews from our customers
+              What They Say About AMV UI
             </h2>
 
             <p className="mt-4 text-white font-body">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
-              veritatis illo placeat harum porro optio fugit a culpa sunt id!
+              Quality in a team is not about how great the team members are when
+              they come in, but how much they learn and get, once they leave the
+              team.
             </p>
 
             <div className="hidden lg:mt-8 lg:flex lg:gap-4">
@@ -75,9 +73,9 @@ const Testimonial = ({ data = mockData }) => {
                 prevEl: ".prev-button",
               }}
             >
-              {data.map((item) => (
-                <SwiperSlide key={item.name}>
-                  <CardTestimonial />
+              {testimonials.map((item, i) => (
+                <SwiperSlide key={i}>
+                  <CardTestimonial testimonial={item} />
                 </SwiperSlide>
               ))}
             </Swiper>

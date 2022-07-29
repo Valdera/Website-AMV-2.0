@@ -3,7 +3,8 @@ const CTASubscribe = () => {
     <div
       className="w-full bg-secondary-500"
       style={{
-        backgroundImage: "url('https://source.unsplash.com/random/640x480')",
+        backgroundImage:
+          "url('https://firebasestorage.googleapis.com/v0/b/amv-web-e92ff.appspot.com/o/others%2Fbackground_cta_member.jpg?alt=media&token=7859aa28-6219-4d62-b67e-67b01eb7990d')",
         backgroundPosition: "center center",
         backgroundBlendMode: "multiply",
         backgroundSize: "cover",
@@ -24,7 +25,7 @@ const CTASubscribe = () => {
           />
           <button
             type="button"
-            className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 bg-purple-400 text-gray-900"
+            className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 bg-secondary-400 hover:bg-primary-400 transition-all text-gray-900"
           >
             Subscribe
           </button>

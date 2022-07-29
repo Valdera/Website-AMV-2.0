@@ -1,4 +1,4 @@
-import SectionContact from "@components/sections/contact/SectionContact";
+import SectionContact from "@components/section/contact/SectionContact";
 import MapContact from "@components/map/contact/MapContact";
 import Footer from "@components/footer/Footer";
 
