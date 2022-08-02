@@ -7,7 +7,7 @@ const CardTestimonial = ({ testimonial }) => {
         <Avatar size="xl" name={testimonial.name} src={testimonial.image} />
         <div className="mt-4">
           <p className="text-2xl font-bold text-secondary-500 sm:text-3xl">
-            {testimonial.name}
+            {testimonial.title}
           </p>
           <p className="mt-4 font-body leading-relaxed text-gray-500">
             {testimonial.description}

@@ -10,4 +10,12 @@ const RegistrationPage = () => {
   );
 };
 
+export async function getStaticProps() {
+  return {
+    props: {
+      robots: robots,
+    },
+  };
+}
+
 export default RegistrationPage;

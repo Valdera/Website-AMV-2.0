@@ -5,9 +5,10 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-  Link,
+  Text,
 } from "@chakra-ui/react";
 import DesktopNavItem from "@components/navbar/DesktopNavItem";
+import Link from "next/link";
 
 const DesktopNav = ({ navItems }) => {
   const linkColor = "gray.200";
@@ -20,18 +21,17 @@ const DesktopNav = ({ navItems }) => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"sm"}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
-                }}
-              >
-                {navItem.label}
+              <Link href={navItem.href ?? "/"}>
+                <Text
+                  p={2}
+                  fontSize={"sm"}
+                  fontWeight={500}
+                  color={linkColor}
+                  textDecoration={"none"}
+                  className={"hover:text-primary-400 cursor-pointer"}
+                >
+                  {navItem.label}
+                </Text>
               </Link>
             </PopoverTrigger>
 

@@ -13,45 +13,54 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import DesktopNav from "@components/navbar/DesktopNav";
 import MobileNav from "@components/navbar/MobileNav";
+import Link from "next/link";
 
 const NAV_ITEMS = [
+  // {
+  //   label: "Mme",
+  //   children: [
+  //     {
+  //       label: "Explore Design Work",
+  //       subLabel: "Trending Design to inspire you",
+  //       href: "#",
+  //     },
+  //     {
+  //       label: "New & Noteworthy",
+  //       subLabel: "Up-and-coming Designers",
+  //       href: "#",
+  //     },
+  //   ],
+  // },
+  // {
+  //   label: "Find Work",
+  //   children: [
+  //     {
+  //       label: "Job Board",
+  //       subLabel: "Find your dream design job",
+  //       href: "#",
+  //     },
+  //     {
+  //       label: "Freelance Projects",
+  //       subLabel: "An exclusive list for contract work",
+  //       href: "#",
+  //     },
+  //   ],
+  // },
   {
-    label: "Inspiration",
-    children: [
-      {
-        label: "Explore Design Work",
-        subLabel: "Trending Design to inspire you",
-        href: "#",
-      },
-      {
-        label: "New & Noteworthy",
-        subLabel: "Up-and-coming Designers",
-        href: "#",
-      },
-    ],
+    label: "Members",
+    href: "/team",
   },
   {
-    label: "Find Work",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
+    label: "Achievements",
+    href: "/achievement",
   },
   {
-    label: "Learn Design",
-    href: "#",
+    label: "Products",
+    href: "/robot",
   },
   {
-    label: "Hire Designers",
-    href: "#",
+    label: "Blogs",
+    href: "/blog",
   },
 ];
 
@@ -105,19 +114,20 @@ export default function Navbar() {
           direction={"row"}
           spacing={6}
         >
-          <Button
-            display={{ md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"secondary.600"}
-            href={"#"}
-            _hover={{
-              bg: "secondary.700",
-            }}
-          >
-            Contact Us
-          </Button>
+          <Link href={"/contact"}>
+            <Button
+              display={{ md: "inline-flex" }}
+              fontSize={"sm"}
+              fontWeight={600}
+              color={"white"}
+              bg={"secondary.600"}
+              _hover={{
+                bg: "secondary.700",
+              }}
+            >
+              Contact Us
+            </Button>
+          </Link>
         </Stack>
       </Flex>
 

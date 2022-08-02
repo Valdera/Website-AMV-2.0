@@ -9,6 +9,7 @@ import CTASubscribe from "@components/cta/subscribe/CTASubscribe";
 import GridAchievement from "@components/grid/achievement/GridAchievement";
 import Sponsor from "@components/sponsor/Sponsor";
 import CTAInstagram from "@components/cta/documentation/CTAInstagram";
+import { readData } from "@utils/jsonify";
 
 export default function Home({
   sponsors,
@@ -36,52 +37,22 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const fs = require("fs");
-  const path = require("path");
+  const sponsorsData = readData("sponsors.json");
+  const robotsData = readData("robots.json");
+  const divisionsData = readData("divisions.json");
+  const achievementsData = readData("achievements.json");
+  const testimonialsData = readData("testimonials.json");
+  const faqsData = readData("faqs.json");
 
-  const sponsorsData = JSON.parse(
-    fs.readFileSync(
-      path.join(path.resolve(process.cwd(), "public/data"), "sponsors.json"),
-      "utf8"
-    )
+  const sponsors = Object.entries(sponsorsData).map(([_, item]) => item);
+  const divisions = Object.entries(divisionsData).map(([_, item]) => item);
+  const faqs = Object.entries(faqsData).map(([_, item]) => item);
+  const achievements = Object.entries(achievementsData).map(
+    ([_, item]) => item
   );
-  const robotsData = JSON.parse(
-    fs.readFileSync(
-      path.join(path.resolve(process.cwd(), "public/data"), "robots.json"),
-      "utf8"
-    )
+  const testimonials = Object.entries(testimonialsData).map(
+    ([_, item]) => item
   );
-  const divisionsData = JSON.parse(
-    fs.readFileSync(
-      path.join(path.resolve(process.cwd(), "public/data"), "divisions.json"),
-      "utf8"
-    )
-  );
-  const achievementsData = JSON.parse(
-    fs.readFileSync(
-      path.join(
-        path.resolve(process.cwd(), "public/data"),
-        "achievements.json"
-      ),
-      "utf8"
-    )
-  );
-  const testimonialsData = JSON.parse(
-    fs.readFileSync(
-      path.join(
-        path.resolve(process.cwd(), "public/data"),
-        "testimonials.json"
-      ),
-      "utf8"
-    )
-  );
-  const faqsData = JSON.parse(
-    fs.readFileSync(
-      path.join(path.resolve(process.cwd(), "public/data"), "faqs.json"),
-      "utf8"
-    )
-  );
-
   const robots = Object.entries(robotsData).map(([_, item]) => {
     if (item.tags != "") {
       item.tags = item.tags.split(",");
@@ -93,15 +64,6 @@ export async function getStaticProps() {
     item.tags.push(item.type);
     return item;
   });
-  const sponsors = Object.entries(sponsorsData).map(([_, item]) => item);
-  const testimonials = Object.entries(testimonialsData).map(
-    ([_, item]) => item
-  );
-  const divisions = Object.entries(divisionsData).map(([_, item]) => item);
-  const achievements = Object.entries(achievementsData).map(
-    ([_, item]) => item
-  );
-  const faqs = Object.entries(faqsData).map(([_, item]) => item);
 
   return {
     props: {

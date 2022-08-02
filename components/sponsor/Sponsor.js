@@ -1,5 +1,4 @@
 import { Image } from "@chakra-ui/react";
-import ButtonRounded from "@components/button/rounded/ButtonRounded";
 import Link from "next/link";
 
 const Sponsor = ({ sponsors }) => {

@@ -9,7 +9,7 @@ const CardRobot = ({ robot }) => {
     <>
       <div className="relative block bg-white rounded-lg hover:shadow-sm hover:shadow-primary-400">
         <Image
-          loading="lazy"
+          loading="eager"
           alt={robot.name}
           className="object-contain w-full h-56 lg:h-72"
           src={robot.images}

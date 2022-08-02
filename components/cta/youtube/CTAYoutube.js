@@ -11,6 +11,7 @@ import {
   IconButton,
   createIcon,
   useColorModeValue,
+  Link,
 } from "@chakra-ui/react";
 
 const CTAYoutube = () => {
@@ -53,27 +54,29 @@ const CTAYoutube = () => {
               </Text>
             </Heading>
             <Text color={"gray.400"} className="font-body">
-              Snippy is a rich coding snippets app that lets you create your own
-              code snippets, categorize them, and even sync them in the cloud so
-              you can use them anywhere. All that is free!
+              Along the journey, AMV UI has made many achievements. We compete
+              in both national and international competition. Let&apos;s check
+              out what we got through the years!
             </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
               direction={{ base: "column", sm: "row" }}
             >
-              <Button
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={6}
-                colorScheme={"secondary"}
-                bg={"secondary.600"}
-                leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
-                _hover={{ bg: "secondary.500" }}
-                fontFamily={"body"}
-              >
-                Get started
-              </Button>
+              <Link isExternal href="https://www.youtube.com/user/roboboatui">
+                <Button
+                  rounded={"full"}
+                  size={"lg"}
+                  fontWeight={"normal"}
+                  px={6}
+                  colorScheme={"secondary"}
+                  bg={"secondary.600"}
+                  leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
+                  _hover={{ bg: "secondary.500" }}
+                  fontFamily={"body"}
+                >
+                  Get started
+                </Button>
+              </Link>
             </Stack>
           </Stack>
           <Flex
@@ -100,18 +103,20 @@ const CTAYoutube = () => {
               width={"full"}
               overflow={"hidden"}
             >
-              <IconButton
-                aria-label={"Play Button"}
-                variant={"ghost"}
-                _hover={{ bg: "transparent" }}
-                icon={<PlayIcon w={12} h={12} />}
-                size={"lg"}
-                color={"white"}
-                position={"absolute"}
-                left={"50%"}
-                top={"50%"}
-                transform={"translateX(-50%) translateY(-50%)"}
-              />
+              <Link isExternal href="https://www.youtube.com/user/roboboatui">
+                <IconButton
+                  aria-label={"Play Button"}
+                  variant={"ghost"}
+                  _hover={{ bg: "transparent" }}
+                  icon={<PlayIcon w={12} h={12} />}
+                  size={"lg"}
+                  color={"white"}
+                  position={"absolute"}
+                  left={"50%"}
+                  top={"50%"}
+                  transform={"translateX(-50%) translateY(-50%)"}
+                />
+              </Link>
               <Image
                 alt={"Hero Image"}
                 fit={"cover"}

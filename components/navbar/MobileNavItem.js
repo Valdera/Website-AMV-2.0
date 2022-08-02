@@ -2,12 +2,13 @@ import {
   Flex,
   Text,
   Stack,
-  Link,
+  Link as ChakraLink,
   Icon,
   Collapse,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const MobileNavItem = ({ label, children, href }) => {
@@ -15,30 +16,28 @@ const MobileNavItem = ({ label, children, href }) => {
 
   return (
     <Stack spacing={4} onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? "#"}
-        justify={"space-between"}
-        align={"center"}
-        _hover={{
-          textDecoration: "none",
-        }}
-      >
-        <Text fontWeight={600} color={"gray.200"}>
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
-
+      <Link href={href ?? "/"} passHref>
+        <Flex
+          py={2}
+          as={Text}
+          justify={"space-between"}
+          align={"center"}
+          textDecoration={"none"}
+        >
+          <Text fontWeight={600} color={"gray.200"}>
+            {label}
+          </Text>
+          {children && (
+            <Icon
+              as={ChevronDownIcon}
+              transition={"all .25s ease-in-out"}
+              transform={isOpen ? "rotate(180deg)" : ""}
+              w={6}
+              h={6}
+            />
+          )}
+        </Flex>
+      </Link>
       <Collapse in={isOpen} animateOpacity style={{ marginTop: "0!important" }}>
         <Stack
           mt={2}
@@ -51,8 +50,10 @@ const MobileNavItem = ({ label, children, href }) => {
         >
           {children &&
             children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
+              <Link href={child.href ?? "/"} key={child.label}>
+                <Text className="cursor-pointer" py={2}>
+                  {child.label}
+                </Text>
               </Link>
             ))}
         </Stack>

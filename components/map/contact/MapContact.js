@@ -10,7 +10,7 @@ const MapContact = () => {
           marginWidth="0"
           title="map"
           scrolling="no"
-          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15860.885562968931!2d106.8243239!3d-6.3653881!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd8f72fb9dd41569d!2sPusat%20Kegiatan%20Mahasiswa%20(Pusgiwa)%20Universitas%20Indonesia!5e0!3m2!1sen!2sid!4v1659443476362!5m2!1sen!2sid"
         ></iframe>
       </div>
       <div className="container px-5 py-24 mx-auto flex">
